@@ -13,30 +13,15 @@
   <b>Code Coming Soon</b>
 </p>
 
----
-
-## Overview
-
-**RATR** is a training-free material rebinding framework built upon a frozen
-two-image editor.
-
-The key idea is to reorganize the target image and material reference into
-role-specific visual conditions before generation. RATR aims to preserve the
-geometry and identity of the target object while transferring the visible
-material appearance of the reference.
-
-The current repository serves as the project page and result gallery.
-More qualitative results, comparisons, ablations, and implementation details
-will be added progressively.
-
----
-
-## Teaser
-
 <p align="center">
   <img src="./assets/images/figure1.jpg" width="100%">
 </p>
 
+---
+
+## Overview
+
+**RATR** is a training-free material rebinding framework built upon a frozen two-image editor. It reorganizes the target image and material reference into role-specific visual conditions before generation, aiming to preserve the geometry and identity of the target object while transferring the visible material appearance of the reference. This repository serves as the project page and result gallery, with more qualitative results, comparisons, ablations, and implementation details to be added progressively.
 
 ---
 
