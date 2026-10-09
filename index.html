@@ -5,11 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing</title>
+  <title>
+    RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing
+  </title>
 
   <meta
     name="description"
     content="RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing"
+  >
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
   <style>
@@ -21,9 +29,8 @@
       margin: 0;
       background: #ffffff;
       color: #222222;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
-      line-height: 1.65;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.62;
     }
 
     a {
@@ -31,41 +38,38 @@
       text-decoration: none;
     }
 
-    .page {
-      width: min(1040px, calc(100% - 36px));
+    .container {
+      width: min(1050px, calc(100% - 40px));
       margin: 0 auto;
     }
 
     /* =========================
-       Header
+       HERO
        ========================= */
 
     .hero {
       text-align: center;
-      padding: 72px 0 38px;
+      padding-top: 58px;
+      padding-bottom: 28px;
     }
 
     .hero h1 {
+      max-width: 1000px;
       margin: 0 auto;
-      max-width: 980px;
-      font-size: clamp(2rem, 4.7vw, 3.35rem);
-      line-height: 1.15;
-      font-weight: 750;
-      letter-spacing: -0.035em;
-    }
-
-    .hero h1 .ratr {
-      font-weight: 850;
+      font-size: 42px;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
 
     .authors {
-      margin-top: 25px;
-      font-size: 1.08rem;
+      margin-top: 22px;
+      font-size: 18px;
       line-height: 1.8;
     }
 
     .authors a {
-      color: #255e9b;
+      color: #2b67a0;
     }
 
     .authors a:hover {
@@ -73,195 +77,247 @@
     }
 
     .affiliations {
-      margin-top: 7px;
+      margin-top: 5px;
+      font-size: 15px;
       color: #555555;
-      font-size: 0.95rem;
       line-height: 1.7;
     }
 
-    .buttons {
-      margin-top: 23px;
+    .links {
+      margin-top: 21px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 9px;
     }
 
-    .button {
+    .link-button {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-width: 108px;
-      padding: 8px 17px;
-      border-radius: 7px;
-      background: #252525;
+      gap: 7px;
+
+      padding: 7px 15px;
+
+      background: #333333;
       color: #ffffff;
-      font-size: 0.94rem;
+
+      border-radius: 5px;
+
+      font-size: 15px;
       font-weight: 600;
+
       transition: 0.15s ease;
     }
 
-    .button:hover {
-      background: #444444;
+    .link-button:hover {
+      background: #555555;
       transform: translateY(-1px);
     }
 
-    .button.disabled {
-      background: #eeeeee;
-      color: #777777;
+    .link-button.paper-disabled {
+      background: #4b6f96;
       cursor: default;
     }
 
-    .button.disabled:hover {
+    .link-button.paper-disabled:hover {
       transform: none;
     }
 
     .tagline {
-      max-width: 790px;
-      margin: 28px auto 0;
-      color: #444444;
-      font-size: 1.08rem;
+      max-width: 800px;
+      margin: 24px auto 0;
+
+      font-size: 19px;
+      line-height: 1.55;
+
+      font-weight: 600;
+      color: #333333;
     }
 
     /* =========================
-       Common sections
+       GENERAL SECTION
        ========================= */
 
     section {
-      padding: 34px 0;
+      padding: 35px 0;
     }
 
     .section-title {
       margin: 0 0 20px;
+
       text-align: center;
-      font-size: 1.8rem;
-      font-weight: 720;
-      letter-spacing: -0.02em;
+
+      font-size: 29px;
+      line-height: 1.25;
+      font-weight: 700;
     }
 
     .section-text {
-      max-width: 900px;
+      max-width: 930px;
       margin: 0 auto;
-      font-size: 1.02rem;
+
+      font-size: 16.5px;
+      line-height: 1.75;
+
       text-align: justify;
     }
 
     .divider {
-      width: 100%;
       height: 1px;
-      background: #eeeeee;
-      margin: 4px 0;
+      background: #ededed;
     }
 
     /* =========================
-       Figures
+       FIGURES
        ========================= */
 
     .figure {
       width: 100%;
       margin: 0 auto;
+      text-align: center;
     }
 
     .figure img {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 4px;
+      margin: 0 auto;
     }
 
     .caption {
       max-width: 900px;
-      margin: 13px auto 0;
+      margin: 12px auto 0;
+
       color: #666666;
-      font-size: 0.94rem;
+      font-size: 14.5px;
+      line-height: 1.55;
+
       text-align: center;
     }
 
     /* =========================
-       Mechanism cards
+       METHOD STRIP
        ========================= */
 
-    .mechanisms {
+    .method-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 25px;
+
+      gap: 14px;
+
+      max-width: 980px;
+      margin: 27px auto 0;
     }
 
-    .mechanism {
-      padding: 20px 20px 18px;
-      border: 1px solid #e6e6e6;
-      border-radius: 9px;
+    .method-card {
+      border: 1px solid #e2e2e2;
+      border-radius: 7px;
+
+      padding: 19px 18px;
+
       background: #fafafa;
     }
 
-    .mechanism h3 {
-      margin: 0 0 8px;
-      font-size: 1.02rem;
+    .method-card .number {
+      font-size: 13px;
+      color: #888888;
       font-weight: 700;
+
+      margin-bottom: 4px;
     }
 
-    .mechanism p {
+    .method-card h3 {
+      margin: 0 0 8px;
+
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .method-card p {
       margin: 0;
+
       color: #555555;
-      font-size: 0.92rem;
+
+      font-size: 14.5px;
       line-height: 1.55;
     }
 
     /* =========================
-       Gallery
+       RESULTS
        ========================= */
 
-    .gallery-item {
-      margin-top: 28px;
+    .result-block {
+      margin-top: 10px;
     }
 
-    .gallery-item:first-of-type {
-      margin-top: 0;
-    }
-
-    .gallery-title {
-      margin: 0 0 12px;
-      font-size: 1.08rem;
-      font-weight: 680;
+    .result-title {
       text-align: center;
+
+      font-size: 18px;
+      font-weight: 600;
+
+      margin-bottom: 14px;
     }
 
     /* =========================
-       BibTeX
+       BIBTEX
        ========================= */
 
     pre {
       max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
+
       overflow-x: auto;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
+
+      border: 1px solid #e1e1e1;
+      border-radius: 6px;
+
       background: #f7f7f7;
-      font-size: 0.88rem;
-      line-height: 1.55;
+
+      padding: 20px;
+
+      font-size: 14px;
+      line-height: 1.5;
+
       white-space: pre-wrap;
     }
 
     /* =========================
-       Footer
+       FOOTER
        ========================= */
 
     footer {
-      padding: 38px 0 42px;
-      border-top: 1px solid #eeeeee;
-      color: #777777;
+      border-top: 1px solid #ededed;
+
+      padding: 30px 0 36px;
+
       text-align: center;
-      font-size: 0.86rem;
+
+      color: #777777;
+
+      font-size: 13px;
+      line-height: 1.7;
     }
 
-    @media (max-width: 760px) {
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 750px) {
+
       .hero {
-        padding-top: 48px;
+        padding-top: 38px;
       }
 
-      .mechanisms {
+      .hero h1 {
+        font-size: 31px;
+      }
+
+      .authors {
+        font-size: 16px;
+      }
+
+      .method-strip {
         grid-template-columns: 1fr;
       }
 
@@ -272,64 +328,112 @@
   </style>
 </head>
 
+
 <body>
 
-  <main class="page">
+  <div class="container">
+
 
     <!-- =====================================================
-         HERO
+         TITLE
          ===================================================== -->
 
     <header class="hero">
 
       <h1>
-        <span class="ratr">RATR:</span>
-        Training-Free Material Rebinding via
+        RATR: Training-Free Material Rebinding via
         Role Assignment and Temporal Routing
       </h1>
 
+
+      <!-- AUTHORS -->
+
       <div class="authors">
-        <a href="mailto:jiehuitang@zju.edu.cn">Jiehui Tang</a>,
-        <a href="mailto:yuyunlong@zju.edu.cn">Yunlong Yu</a>,
-        <a href="mailto:zhao_wang@zju.edu.cn">Zhao Wang</a>,
-        <a href="mailto:jungonghan77@gmail.com">Jungong Han</a>
+
+        <a href="mailto:jiehuitang@zju.edu.cn">
+          Jiehui Tang
+        </a><sup>1</sup>,
+
+        <a href="mailto:yuyunlong@zju.edu.cn">
+          Yunlong Yu
+        </a><sup>1*</sup>,
+
+        <a href="mailto:zhao_wang@zju.edu.cn">
+          Zhao Wang
+        </a><sup>2</sup>,
+
+        <a href="mailto:jungonghan77@gmail.com">
+          Jungong Han
+        </a><sup>3</sup>
+
       </div>
 
+
+      <!-- AFFILIATIONS -->
+
       <div class="affiliations">
+
         <div>
-          <sup>1</sup> College of Information Science and Electronic Engineering,
+          <sup>1</sup>
+          College of Information Science and Electronic Engineering,
           Zhejiang University
         </div>
 
         <div>
-          <sup>2</sup> Ningbo Innovation Center, Zhejiang University
-          &nbsp;&nbsp;
-          <sup>3</sup> Department of Automation, Tsinghua University
+          <sup>2</sup>
+          Ningbo Innovation Center, Zhejiang University
         </div>
+
+        <div>
+          <sup>3</sup>
+          Department of Automation, Tsinghua University
+        </div>
+
+        <div>
+          * Corresponding author
+        </div>
+
       </div>
 
-      <div class="buttons">
+
+      <!-- LINKS -->
+
+      <div class="links">
 
         <!--
-          Paper 尚未公开。
-          以后只需要把这一整个 span 换成：
+        Paper 公开以后改成：
 
-          <a class="button"
-             href="https://arxiv.org/abs/XXXX.XXXXX"
-             target="_blank">
-            Paper
-          </a>
+        <a
+          class="link-button"
+          href="https://arxiv.org/abs/XXXX.XXXXX"
+          target="_blank"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+          Paper
+        </a>
         -->
 
-        <span class="button disabled">
-          Paper · Coming Soon
+        <span class="link-button paper-disabled">
+          <i class="fa-solid fa-file-pdf"></i>
+          Paper Coming Soon
         </span>
+
+
+        <a
+          class="link-button"
+          href="https://github.com/tangjieh/RATR"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
 
       </div>
 
+
       <div class="tagline">
-        Assign complementary structural and material roles to visual conditions,
-        then route their contributions over the denoising trajectory.
+        Assign complementary structural and material roles to visual
+        conditions, then route their contributions over the denoising trajectory.
       </div>
 
     </header>
@@ -342,15 +446,17 @@
     <section>
 
       <div class="figure">
+
         <img
           src="./assets/images/figure1.jpg"
           alt="RATR teaser"
         >
+
       </div>
 
       <div class="caption">
         RATR preserves target geometry while rebinding diverse material
-        appearances across objects, materials, and target categories.
+        appearances across targets, materials, and object categories.
       </div>
 
     </section>
@@ -365,9 +471,12 @@
 
     <section id="abstract">
 
-      <h2 class="section-title">Abstract</h2>
+      <h2 class="section-title">
+        Abstract
+      </h2>
 
       <p class="section-text">
+
         Material rebinding aims to transfer the material appearance from a
         reference image while preserving the target object's geometry and
         identity. Existing methods often struggle to balance material fidelity
@@ -382,20 +491,21 @@
         material roles to the target and reference conditions, respectively,
         and dynamically adjusts their contributions during denoising. To make
         the target condition primarily convey structure, we introduce an
-        albedo-resolved surface release mechanism, which suppresses the
-        target's original surface appearance while retaining geometric cues,
-        yielding a structure-oriented condition for material transfer. On the
-        reference side, the designed material evidence isolation mechanism
-        emphasizes material cues while reducing interference from
-        object-specific structure, yielding a complementary material-oriented
-        condition. Surface–material conditional direction routing then
-        dynamically adjusts the residual contributions of these two conditions
-        at different denoising stages, balancing structural preservation and
-        material transfer without modifying the editor's parameters. Across
-        diverse target–material pairs, RATR delivers superior results on all
-        five reported target-side preservation metrics and leading
-        reference-side material fidelity under our evaluation protocol,
-        without requiring editor retraining.
+        albedo-resolved surface release mechanism, which suppresses the target's
+        original surface appearance while retaining geometric cues, yielding a
+        structure-oriented condition for material transfer. On the reference
+        side, the designed material evidence isolation mechanism emphasizes
+        material cues while reducing interference from object-specific
+        structure, yielding a complementary material-oriented condition.
+        Surface–material conditional direction routing then dynamically adjusts
+        the residual contributions of these two conditions at different
+        denoising stages, balancing structural preservation and material
+        transfer without modifying the editor's parameters. Across diverse
+        target–material pairs, RATR delivers superior results on all five
+        reported target-side preservation metrics and leading reference-side
+        material fidelity under our evaluation protocol, without requiring
+        editor retraining.
+
       </p>
 
     </section>
@@ -405,45 +515,81 @@
 
 
     <!-- =====================================================
-         METHOD SUMMARY
+         METHOD
          ===================================================== -->
 
     <section id="method">
 
-      <h2 class="section-title">How RATR Works</h2>
+      <h2 class="section-title">
+        Method
+      </h2>
+
 
       <p class="section-text">
-        RATR treats material rebinding as a problem of assigning different
-        roles to the two visual conditions and controlling when each role
-        should dominate the generation process.
+        RATR formulates material rebinding through complementary role assignment
+        and temporal routing. Instead of directly exposing the frozen editor to
+        entangled target and reference appearances, the two visual conditions are
+        reorganized toward structural and material roles before their residual
+        contributions are dynamically coordinated during denoising.
       </p>
 
-      <div class="mechanisms">
 
-        <div class="mechanism">
-          <h3>Target-side Role Assignment</h3>
+      <div class="method-strip">
+
+
+        <div class="method-card">
+
+          <div class="number">
+            01
+          </div>
+
+          <h3>
+            Target-side Role Assignment
+          </h3>
+
           <p>
-            Albedo-resolved surface release weakens the original target
-            appearance while retaining geometry-oriented structural cues.
+            Albedo-resolved surface release suppresses the original target
+            appearance while preserving geometry-oriented structural cues.
           </p>
+
         </div>
 
-        <div class="mechanism">
-          <h3>Material Evidence Isolation</h3>
+
+        <div class="method-card">
+
+          <div class="number">
+            02
+          </div>
+
+          <h3>
+            Material Evidence Isolation
+          </h3>
+
           <p>
-            A lightweight reference-side conditioning step retains visible
-            material evidence while reducing object- and scene-specific
-            interference.
+            A lightweight reference-side conditioning step retains material
+            evidence while reducing object- and scene-specific interference.
           </p>
+
         </div>
 
-        <div class="mechanism">
-          <h3>Temporal Routing</h3>
+
+        <div class="method-card">
+
+          <div class="number">
+            03
+          </div>
+
+          <h3>
+            Temporal Routing
+          </h3>
+
           <p>
-            SM-CDR dynamically reallocates the residual contributions of
-            structure- and material-oriented conditions throughout denoising.
+            SM-CDR dynamically coordinates structure- and material-oriented
+            residual contributions across different denoising stages.
           </p>
+
         </div>
+
 
       </div>
 
@@ -459,51 +605,35 @@
 
     <section id="results">
 
-      <h2 class="section-title">Qualitative Results</h2>
+      <h2 class="section-title">
+        Qualitative Results
+      </h2>
 
-      <div class="gallery-item">
 
-        <div class="gallery-title">
+      <div class="result-block">
+
+        <div class="result-title">
           Comparison with Existing Methods
         </div>
 
+
         <div class="figure">
+
           <img
             src="./assets/images/comparison.jpg"
-            alt="RATR qualitative comparison"
+            alt="Comparison across material transfer methods"
           >
+
         </div>
 
+
         <div class="caption">
-          Qualitative comparison across representative target–material pairs.
-          RATR aims to jointly retain target structure and express the material
-          appearance of the reference.
+          Qualitative comparisons across representative target–material pairs.
+          RATR aims to preserve the target structure while faithfully expressing
+          the material appearance of the reference.
         </div>
 
       </div>
-
-      <!--
-        以后继续加图时，直接复制下面这块：
-
-        <div class="gallery-item">
-
-          <div class="gallery-title">
-            Diverse Targets and Materials
-          </div>
-
-          <div class="figure">
-            <img
-              src="./assets/images/qualitative1.jpg"
-              alt="Additional qualitative results"
-            >
-          </div>
-
-          <div class="caption">
-            Additional qualitative results across diverse targets and materials.
-          </div>
-
-        </div>
-      -->
 
     </section>
 
@@ -517,15 +647,17 @@
 
     <section>
 
-      <h2 class="section-title">More Results</h2>
+      <h2 class="section-title">
+        More Results
+      </h2>
 
       <p
         class="section-text"
         style="text-align:center;"
       >
-        Additional qualitative comparisons, ablation studies, routing
-        visualizations, and challenging material-transfer examples will be
-        added progressively.
+        Additional qualitative results, ablation studies, routing
+        visualizations, and challenging material-rebinding examples
+        will be added progressively.
       </p>
 
     </section>
@@ -540,17 +672,20 @@
 
     <section id="citation">
 
-      <h2 class="section-title">BibTeX</h2>
+      <h2 class="section-title">
+        BibTeX
+      </h2>
 
       <pre>@article{tang2026ratr,
-  title   = {RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing},
-  author  = {Tang, Jiehui and Yu, Yunlong and Wang, Zhao and Han, Jungong},
-  year    = {2026}
+  title  = {RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing},
+  author = {Tang, Jiehui and Yu, Yunlong and Wang, Zhao and Han, Jungong},
+  year   = {2026}
 }</pre>
 
     </section>
 
-  </main>
+
+  </div>
 
 
   <!-- =======================================================
@@ -559,13 +694,18 @@
 
   <footer>
 
-    <div class="page">
+    <div class="container">
+
       RATR Project Page
+
       <br>
-      Zhejiang University · Tsinghua University
+
+      Zhejiang University &nbsp;·&nbsp; Tsinghua University
+
     </div>
 
   </footer>
+
 
 </body>
 
