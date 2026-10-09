@@ -81,13 +81,3 @@ released after the paper is ready for public release.
 ## Citation
 
 BibTeX will be added upon publication.
-
----
-
-## Acknowledgements
-
-This project builds upon publicly available image editing and material transfer
-research.
-
-Detailed acknowledgements and links to the corresponding projects will be
-added with the code release.
