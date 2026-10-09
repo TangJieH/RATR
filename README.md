@@ -9,8 +9,13 @@
 </p>
 
 <p align="center">
-  <b>Paper Coming Soon</b> &nbsp;|&nbsp;
-  <b>Code Coming Soon</b>
+  <a href="https://tangjieh.github.io/RATR/" target="_blank">
+    <img src="https://img.shields.io/badge/Project-Page-4C9A2A?style=flat-square" alt="Project Page">
+  </a>
+
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/Paper-Coming%20Soon-2F6FB0?style=flat-square" alt="Paper">
+  </a>
 </p>
 
 <p align="center">
