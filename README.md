@@ -33,7 +33,7 @@ Code and additional resources will be released later.
 ## Teaser
 
 <p align="center">
-  <img src="assets/images/fig1_teaser.png" width="100%">
+  <img src="assets/images/fig1_teaser.pdf" width="100%">
 </p>
 
 <p align="center">
@@ -48,7 +48,7 @@ Code and additional resources will be released later.
 ## Qualitative Results
 
 <p align="center">
-  <img src="assets/images/fig3_qualitative.png" width="100%">
+  <img src="assets/images/fig3_qualitative.pdf" width="100%">
 </p>
 
 <p align="center">
