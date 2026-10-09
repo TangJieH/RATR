@@ -21,6 +21,7 @@
   >
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -43,9 +44,10 @@
       margin: 0 auto;
     }
 
-    /* =========================
+
+    /* ======================================================
        HERO
-       ========================= */
+       ====================================================== */
 
     .hero {
       text-align: center;
@@ -134,9 +136,10 @@
       color: #333333;
     }
 
-    /* =========================
+
+    /* ======================================================
        GENERAL SECTION
-       ========================= */
+       ====================================================== */
 
     section {
       padding: 35px 0;
@@ -162,14 +165,27 @@
       text-align: justify;
     }
 
+    .section-intro {
+      max-width: 900px;
+      margin: 0 auto 22px;
+
+      color: #444444;
+
+      font-size: 16px;
+      line-height: 1.7;
+
+      text-align: center;
+    }
+
     .divider {
       height: 1px;
       background: #ededed;
     }
 
-    /* =========================
+
+    /* ======================================================
        FIGURES
-       ========================= */
+       ====================================================== */
 
     .figure {
       width: 100%;
@@ -178,6 +194,18 @@
     }
 
     .figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .framework-figure {
+      max-width: 1000px;
+      margin: 26px auto 0;
+    }
+
+    .framework-figure img {
       display: block;
       width: 100%;
       height: auto;
@@ -195,73 +223,38 @@
       text-align: center;
     }
 
-    /* =========================
-       METHOD STRIP
-       ========================= */
 
-    .method-strip {
+    /* ======================================================
+       APPENDIX / MORE RESULTS
+       ====================================================== */
+
+    .appendix-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      gap: 14px;
+      gap: 16px;
 
-      max-width: 980px;
-      margin: 27px auto 0;
+      width: 100%;
+      margin-top: 22px;
     }
 
-    .method-card {
-      border: 1px solid #e2e2e2;
-      border-radius: 7px;
-
-      padding: 19px 18px;
-
-      background: #fafafa;
+    .appendix-item {
+      width: 100%;
     }
 
-    .method-card .number {
-      font-size: 13px;
-      color: #888888;
-      font-weight: 700;
+    .appendix-item img {
+      display: block;
 
-      margin-bottom: 4px;
+      width: 100%;
+      height: auto;
+
+      margin: 0 auto;
     }
 
-    .method-card h3 {
-      margin: 0 0 8px;
 
-      font-size: 17px;
-      line-height: 1.35;
-    }
-
-    .method-card p {
-      margin: 0;
-
-      color: #555555;
-
-      font-size: 14.5px;
-      line-height: 1.55;
-    }
-
-    /* =========================
-       RESULTS
-       ========================= */
-
-    .result-block {
-      margin-top: 10px;
-    }
-
-    .result-title {
-      text-align: center;
-
-      font-size: 18px;
-      font-weight: 600;
-
-      margin-bottom: 14px;
-    }
-
-    /* =========================
+    /* ======================================================
        BIBTEX
-       ========================= */
+       ====================================================== */
 
     pre {
       max-width: 900px;
@@ -282,9 +275,10 @@
       white-space: pre-wrap;
     }
 
-    /* =========================
+
+    /* ======================================================
        FOOTER
-       ========================= */
+       ====================================================== */
 
     footer {
       border-top: 1px solid #ededed;
@@ -299,9 +293,10 @@
       line-height: 1.7;
     }
 
-    /* =========================
+
+    /* ======================================================
        MOBILE
-       ========================= */
+       ====================================================== */
 
     @media (max-width: 750px) {
 
@@ -317,14 +312,16 @@
         font-size: 16px;
       }
 
-      .method-strip {
-        grid-template-columns: 1fr;
-      }
-
       .section-text {
         text-align: left;
       }
+
+      .appendix-row {
+        grid-template-columns: 1fr;
+      }
+
     }
+
   </style>
 </head>
 
@@ -401,7 +398,7 @@
       <div class="links">
 
         <!--
-        Paper 公开以后改成：
+        Paper 公开以后改为：
 
         <a
           class="link-button"
@@ -526,71 +523,31 @@
 
 
       <p class="section-text">
-        RATR formulates material rebinding through complementary role assignment
-        and temporal routing. Instead of directly exposing the frozen editor to
-        entangled target and reference appearances, the two visual conditions are
-        reorganized toward structural and material roles before their residual
-        contributions are dynamically coordinated during denoising.
+
+        RATR assigns complementary structural and material roles to the target
+        and reference conditions before dynamically routing their residual
+        contributions throughout denoising. The target-side surface release
+        weakens the original target appearance while preserving structural cues,
+        material evidence isolation constructs a cleaner material-oriented
+        reference condition, and SM-CDR temporally coordinates the two
+        role-specific conditions to balance material transfer with structural
+        preservation.
+
       </p>
 
 
-      <div class="method-strip">
+      <div class="framework-figure">
+
+        <img
+          src="./assets/images/framework.jpg"
+          alt="RATR framework"
+        >
+
+      </div>
 
 
-        <div class="method-card">
-
-          <div class="number">
-            01
-          </div>
-
-          <h3>
-            Target-side Role Assignment
-          </h3>
-
-          <p>
-            Albedo-resolved surface release suppresses the original target
-            appearance while preserving geometry-oriented structural cues.
-          </p>
-
-        </div>
-
-
-        <div class="method-card">
-
-          <div class="number">
-            02
-          </div>
-
-          <h3>
-            Material Evidence Isolation
-          </h3>
-
-          <p>
-            A lightweight reference-side conditioning step retains material
-            evidence while reducing object- and scene-specific interference.
-          </p>
-
-        </div>
-
-
-        <div class="method-card">
-
-          <div class="number">
-            03
-          </div>
-
-          <h3>
-            Temporal Routing
-          </h3>
-
-          <p>
-            SM-CDR dynamically coordinates structure- and material-oriented
-            residual contributions across different denoising stages.
-          </p>
-
-        </div>
-
-
+      <div class="caption">
+        Overview of the RATR framework.
       </div>
 
     </section>
@@ -610,29 +567,20 @@
       </h2>
 
 
-      <div class="result-block">
+      <div class="figure">
 
-        <div class="result-title">
-          Comparison with Existing Methods
-        </div>
+        <img
+          src="./assets/images/comparison.jpg"
+          alt="Comparison across material transfer methods"
+        >
 
-
-        <div class="figure">
-
-          <img
-            src="./assets/images/comparison.jpg"
-            alt="Comparison across material transfer methods"
-          >
-
-        </div>
+      </div>
 
 
-        <div class="caption">
-          Qualitative comparisons across representative target–material pairs.
-          RATR aims to preserve the target structure while faithfully expressing
-          the material appearance of the reference.
-        </div>
-
+      <div class="caption">
+        Qualitative comparisons across representative target-material pairs.
+        RATR preserves target structure while expressing the material appearance
+        of the reference.
       </div>
 
     </section>
@@ -645,20 +593,67 @@
          MORE RESULTS
          ===================================================== -->
 
-    <section>
+    <section id="more-results">
 
       <h2 class="section-title">
         More Results
       </h2>
 
-      <p
-        class="section-text"
-        style="text-align:center;"
-      >
-        Additional qualitative results, ablation studies, routing
-        visualizations, and challenging material-rebinding examples
-        will be added progressively.
+
+      <p class="section-intro">
+        Additional results demonstrate RATR across diverse target categories,
+        material appearances, and challenging reference conditions.
       </p>
+
+
+      <div class="appendix-row">
+
+
+        <div class="appendix-item">
+
+          <img
+            src="./assets/images/appendix1.jpg"
+            alt="Additional RATR qualitative results 1"
+          >
+
+        </div>
+
+
+        <div class="appendix-item">
+
+          <img
+            src="./assets/images/appendix2.jpg"
+            alt="Additional RATR qualitative results 2"
+          >
+
+        </div>
+
+
+      </div>
+
+
+      <!-- ===================================================
+           FUTURE RESULTS
+
+           后续如果你还要继续添加 qualitative / ablation /
+           routing / failure cases，可以从这里继续增加。
+
+           示例：
+
+           <div style="margin-top: 32px;">
+
+             <div class="figure">
+               <img
+                 src="./assets/images/qualitative3.jpg"
+                 alt="Additional qualitative results"
+               >
+             </div>
+
+           </div>
+
+           暂时不显示任何占位内容。
+           =================================================== -->
+
 
     </section>
 
