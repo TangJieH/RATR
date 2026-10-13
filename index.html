@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>
     RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing
@@ -14,11 +19,19 @@
     content="RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing"
   >
 
-  <!-- Font Awesome -->
+
+  <!-- ======================================================
+       TYPOGRAPHY
+       ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
+
 
   <style>
 
@@ -30,33 +43,46 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       margin: 0;
+
       background: #ffffff;
-      color: #222222;
+      color: #26282a;
 
       font-family:
+        "Source Sans 3",
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        Arial,
-        Helvetica,
         sans-serif;
 
-      line-height: 1.62;
+      font-size: 16px;
+      line-height: 1.68;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+
 
     a {
       color: inherit;
       text-decoration: none;
     }
 
+
+    img {
+      max-width: 100%;
+    }
+
+
     .container {
-      width: min(1080px, calc(100% - 42px));
+      width: min(1080px, calc(100% - 44px));
       margin: 0 auto;
     }
 
@@ -66,51 +92,90 @@
        ====================================================== */
 
     .hero {
-      text-align: center;
 
-      padding-top: 62px;
-      padding-bottom: 30px;
-    }
-
-    .hero h1 {
-      max-width: 1030px;
+      max-width: 1100px;
 
       margin: 0 auto;
 
-      font-size: clamp(34px, 4.4vw, 46px);
-      line-height: 1.16;
+      padding:
+        68px 22px
+        32px;
 
-      font-weight: 760;
-      letter-spacing: -1.15px;
+      text-align: center;
 
-      color: #202124;
     }
+
+
+    .hero h1 {
+
+      max-width: 1040px;
+
+      margin: 0 auto;
+
+      color: #202225;
+
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(38px, 4.7vw, 53px);
+
+      font-weight: 650;
+
+      line-height: 1.13;
+
+      letter-spacing: -1.2px;
+
+    }
+
+
+    /* ======================================================
+       AUTHORS
+       ====================================================== */
 
     .authors {
-      margin-top: 24px;
+
+      margin-top: 27px;
 
       font-size: 18px;
+
       line-height: 1.8;
+
+      font-weight: 500;
+
     }
+
 
     .authors a {
-      color: #356f9f;
+
+      color: #34648a;
 
       transition: color 0.15s ease;
+
     }
+
 
     .authors a:hover {
-      color: #214f78;
+
+      color: #183f60;
+
       text-decoration: underline;
+
     }
 
+
     .affiliations {
-      margin-top: 6px;
 
-      color: #5d6065;
+      margin-top: 7px;
 
-      font-size: 15px;
+      color: #666a6e;
+
+      font-size: 14.7px;
+
       line-height: 1.7;
+
     }
 
 
@@ -119,53 +184,75 @@
        ====================================================== */
 
     .links {
-      margin-top: 22px;
+
+      margin-top: 23px;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
+
+      gap: 10px;
 
       flex-wrap: wrap;
 
-      gap: 10px;
     }
+
 
     .link-button {
+
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
 
-      gap: 7px;
+      min-width: 112px;
 
-      padding: 8px 16px;
+      padding: 8px 17px;
 
-      border-radius: 6px;
+      border-radius: 5px;
 
-      background: #2d2f32;
+      background: #292b2e;
+
       color: #ffffff;
 
-      font-size: 14.5px;
+      font-size: 14px;
+
       font-weight: 600;
 
+      letter-spacing: 0.01em;
+
       transition:
-        transform 0.15s ease,
-        background 0.15s ease;
+        background 0.15s ease,
+        transform 0.15s ease;
+
     }
+
 
     .link-button:hover {
-      background: #484b50;
+
+      background: #45484c;
 
       transform: translateY(-1px);
+
     }
+
 
     .link-button.paper-disabled {
-      background: #55799b;
+
+      background: #557b9b;
 
       cursor: default;
+
     }
 
+
     .link-button.paper-disabled:hover {
+
       transform: none;
+
     }
 
 
@@ -174,114 +261,145 @@
        ====================================================== */
 
     .tagline {
-      max-width: 830px;
 
-      margin: 26px auto 0;
+      max-width: 820px;
 
-      color: #35383b;
+      margin: 27px auto 0;
+
+      color: #42464a;
+
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
 
       font-size: 19px;
-      line-height: 1.58;
-      font-weight: 620;
-    }
 
-    .concept-tags {
-      margin-top: 17px;
+      font-weight: 500;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      line-height: 1.55;
 
-      gap: 9px;
-      flex-wrap: wrap;
-    }
-
-    .concept-tag {
-      display: inline-flex;
-      align-items: center;
-
-      gap: 6px;
-
-      padding: 5px 10px;
-
-      border: 1px solid #e0e5e9;
-      border-radius: 999px;
-
-      background: #fafbfc;
-
-      color: #5a6269;
-
-      font-size: 12.5px;
-      font-weight: 550;
-    }
-
-    .concept-tag i {
-      color: #6684a0;
     }
 
 
     /* ======================================================
-       SECTIONS
+       TEASER
        ====================================================== */
 
-    section {
-      padding: 41px 0;
+    .teaser-section {
+
+      padding:
+        24px 0
+        47px;
+
+      background: #ffffff;
+
     }
 
-    .divider {
-      height: 1px;
 
-      background: #eceef0;
+    /* ======================================================
+       SECTION SYSTEM
+       ====================================================== */
+
+    .section {
+
+      padding:
+        55px 0
+        58px;
+
     }
+
+
+    .section-white {
+
+      background: #ffffff;
+
+    }
+
+
+    .section-tint {
+
+      background: #f6f8fb;
+
+    }
+
 
     .section-title {
-      margin: 0 0 22px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      gap: 10px;
+      margin:
+        0 0
+        27px;
 
       color: #242629;
 
-      font-size: 29px;
-      line-height: 1.25;
-      font-weight: 720;
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
+
+      font-size: 31px;
+
+      font-weight: 650;
+
+      line-height: 1.2;
 
       text-align: center;
+
+      letter-spacing: -0.35px;
+
     }
 
-    .section-title i {
-      color: #65829d;
 
-      font-size: 20px;
+    .section-title::after {
+
+      content: "";
+
+      display: block;
+
+      width: 36px;
+
+      height: 2px;
+
+      margin: 13px auto 0;
+
+      background: #9dafbd;
+
     }
+
 
     .section-text {
-      max-width: 930px;
+
+      max-width: 925px;
 
       margin: 0 auto;
 
-      color: #323538;
+      color: #363a3d;
 
       font-size: 16.5px;
-      line-height: 1.78;
+
+      line-height: 1.82;
 
       text-align: justify;
+
     }
 
-    .section-intro {
-      max-width: 890px;
 
-      margin: 0 auto 28px;
+    .section-intro {
+
+      max-width: 790px;
+
+      margin:
+        -3px auto
+        38px;
 
       color: #555b60;
 
       font-size: 16px;
-      line-height: 1.72;
+
+      line-height: 1.7;
 
       text-align: center;
+
     }
 
 
@@ -290,98 +408,145 @@
        ====================================================== */
 
     .figure {
+
       width: 100%;
 
       margin: 0 auto;
 
       text-align: center;
+
     }
+
 
     .figure img {
+
       display: block;
 
       width: 100%;
+
       height: auto;
 
       margin: 0 auto;
 
-      border-radius: 7px;
+      border-radius: 3px;
 
-      border: 1px solid #f0f0f0;
     }
 
-    .figure-polished img {
-      box-shadow:
-        0 3px 14px rgba(30, 38, 46, 0.055);
+
+    .paper-figure {
+
+      border: 1px solid #eceef0;
+
+      background: #ffffff;
+
     }
 
-    .framework-figure {
-      max-width: 1010px;
-
-      margin: 29px auto 0;
-    }
-
-    .framework-figure img {
-      display: block;
-
-      width: 100%;
-      height: auto;
-
-      margin: 0 auto;
-
-      border-radius: 7px;
-
-      border: 1px solid #ededed;
-
-      box-shadow:
-        0 3px 14px rgba(30, 38, 46, 0.045);
-    }
 
     .caption {
-      max-width: 900px;
 
-      margin: 13px auto 0;
+      max-width: 890px;
 
-      color: #6a6e72;
+      margin:
+        14px auto
+        0;
 
-      font-size: 14.5px;
+      color: #71767a;
+
+      font-size: 14.3px;
+
       line-height: 1.58;
 
       text-align: center;
+
     }
 
 
     /* ======================================================
-       MORE RESULTS
+       FRAMEWORK
+       ====================================================== */
+
+    .framework-figure {
+
+      max-width: 1020px;
+
+      margin: 32px auto 0;
+
+    }
+
+
+    .framework-figure img {
+
+      display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      margin: 0 auto;
+
+      border: 1px solid #eceef0;
+
+      border-radius: 3px;
+
+    }
+
+
+    /* ======================================================
+       MORE RESULTS — LEVEL TWO
        ====================================================== */
 
     .results-group {
-      margin-top: 40px;
+
+      margin-top: 52px;
+
     }
+
 
     .results-group:first-of-type {
-      margin-top: 30px;
+
+      margin-top: 0;
+
     }
+
 
     .results-heading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
-      gap: 8px;
+      margin:
+        0 0
+        24px;
 
-      margin-bottom: 17px;
+      color: #2c3033;
 
-      color: #303438;
+      font-family:
+        "Source Serif 4",
+        Georgia,
+        serif;
 
-      font-size: 19px;
-      font-weight: 680;
+      font-size: 22px;
+
+      font-weight: 600;
+
+      line-height: 1.35;
+
+      text-align: center;
+
     }
 
-    .results-heading i {
-      color: #708ba3;
 
-      font-size: 15px;
+    .results-heading::after {
+
+      content: "";
+
+      display: block;
+
+      width: 27px;
+
+      height: 1px;
+
+      margin: 10px auto 0;
+
+      background: #b4bec6;
+
     }
 
 
@@ -390,64 +555,74 @@
        ====================================================== */
 
     .appendix-row {
+
       display: grid;
 
       grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-      gap: 15px;
+      gap: 17px;
 
       width: 100%;
+
     }
+
 
     .appendix-item {
+
       width: 100%;
+
+      background: #ffffff;
+
     }
 
+
     .appendix-item img {
+
       display: block;
 
       width: 100%;
+
       height: auto;
 
-      border-radius: 7px;
+      border:
+        1px solid
+        #eceef0;
 
-      border: 1px solid #eeeeee;
+      border-radius: 3px;
 
-      box-shadow:
-        0 3px 12px rgba(30, 38, 46, 0.045);
     }
 
 
     /* ======================================================
-       FEATURE RESULT
+       ADDITIONAL RESULT
        ====================================================== */
 
     .feature-result {
-      padding: 13px;
 
-      border: 1px solid #e9ecef;
-      border-radius: 9px;
+      width: 100%;
 
-      background: #fcfcfd;
+      margin: 0 auto;
+
     }
 
+
     .feature-result img {
+
       display: block;
 
       width: 100%;
+
       height: auto;
 
-      border-radius: 5px;
-    }
+      border:
+        1px solid
+        #eceef0;
 
+      border-radius: 3px;
 
-    /* ======================================================
-       FUTURE RESULTS
-       ====================================================== */
+      background: #ffffff;
 
-    .future-results-anchor {
-      margin-top: 38px;
     }
 
 
@@ -455,26 +630,45 @@
        BIBTEX
        ====================================================== */
 
-    pre {
+    .bibtex-wrap {
+
       max-width: 900px;
 
       margin: 0 auto;
 
-      padding: 20px 22px;
+    }
+
+
+    pre {
+
+      margin: 0;
+
+      padding: 22px 25px;
 
       overflow-x: auto;
 
-      border: 1px solid #e1e4e7;
-      border-radius: 7px;
+      border:
+        1px solid
+        #e4e6e8;
 
-      background: #f7f8f9;
+      border-radius: 4px;
 
-      color: #33373a;
+      background: #f6f7f8;
 
-      font-size: 14px;
-      line-height: 1.55;
+      color: #303336;
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 13.7px;
+
+      line-height: 1.6;
 
       white-space: pre-wrap;
+
     }
 
 
@@ -483,24 +677,25 @@
        ====================================================== */
 
     footer {
-      padding: 32px 0 39px;
 
-      border-top: 1px solid #eceef0;
+      padding:
+        34px 0
+        42px;
 
-      color: #7a7d80;
+      border-top:
+        1px solid
+        #e9ebed;
+
+      background: #ffffff;
+
+      color: #818589;
 
       font-size: 13px;
+
       line-height: 1.7;
 
       text-align: center;
-    }
 
-    .footer-icon {
-      margin-bottom: 6px;
-
-      color: #8193a3;
-
-      font-size: 15px;
     }
 
 
@@ -508,215 +703,306 @@
        MOBILE
        ====================================================== */
 
-    @media (max-width: 750px) {
+    @media
+      (max-width: 750px) {
+
 
       .container {
-        width: min(100% - 26px, 1080px);
+
+        width:
+          min(
+            100% - 28px,
+            1080px
+          );
+
       }
+
 
       .hero {
-        padding-top: 40px;
+
+        padding:
+          44px 15px
+          26px;
+
       }
+
 
       .hero h1 {
-        font-size: 30px;
+
+        font-size: 31px;
 
         letter-spacing: -0.5px;
+
       }
+
 
       .authors {
+
         font-size: 16px;
+
       }
+
 
       .affiliations {
-        font-size: 13.5px;
+
+        font-size: 13.3px;
+
       }
+
 
       .tagline {
+
         font-size: 17px;
+
       }
 
-      section {
-        padding: 34px 0;
+
+      .section {
+
+        padding:
+          42px 0
+          45px;
+
       }
+
 
       .section-title {
-        font-size: 25px;
+
+        font-size: 27px;
+
       }
+
 
       .section-text {
+
         text-align: left;
+
       }
 
+
       .appendix-row {
+
         grid-template-columns: 1fr;
 
         gap: 18px;
+
+      }
+
+
+      .results-group {
+
+        margin-top: 42px;
+
+      }
+
+
+      .results-heading {
+
+        font-size: 20px;
+
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <div class="container">
+
+  <!-- ======================================================
+       HERO
+       ====================================================== -->
+
+  <header class="hero">
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+    <h1>
 
-    <header class="hero">
+      RATR: Training-Free Material Rebinding via
+      Role Assignment and Temporal Routing
 
-      <h1>
-        RATR: Training-Free Material Rebinding via
-        Role Assignment and Temporal Routing
-      </h1>
+    </h1>
 
 
-      <!-- AUTHORS -->
+    <!-- AUTHORS -->
 
-      <div class="authors">
-
-        <a href="mailto:tangjiehui@zju.edu.cn">
-          Jiehui Tang
-        </a><sup>1</sup>,
-
-        <a href="mailto:yuyunlong@zju.edu.cn">
-          Yunlong Yu
-        </a><sup>1*</sup>,
-
-        <a href="mailto:zhao_wang@zju.edu.cn">
-          Zhao Wang
-        </a><sup>2</sup>,
-
-        <a href="mailto:jungonghan77@gmail.com">
-          Jungong Han
-        </a><sup>3</sup>
-
-      </div>
+    <div class="authors">
 
 
-      <!-- AFFILIATIONS -->
+      <a href="mailto:tangjiehui@zju.edu.cn">
 
-      <div class="affiliations">
+        Jiehui Tang
 
-        <div>
-          <sup>1</sup>
-          College of Information Science and Electronic Engineering,
-          Zhejiang University
-        </div>
-
-        <div>
-          <sup>2</sup>
-          Ningbo Innovation Center, Zhejiang University
-        </div>
-
-        <div>
-          <sup>3</sup>
-          Department of Automation, Tsinghua University
-        </div>
-
-        <div>
-          * Corresponding author
-        </div>
-
-      </div>
+      </a><sup>1</sup>,
 
 
-      <!-- LINKS -->
+      <a href="mailto:yuyunlong@zju.edu.cn">
 
-      <div class="links">
+        Yunlong Yu
 
-        <span class="link-button paper-disabled">
-          <i class="fa-solid fa-file-pdf"></i>
-          Paper Coming Soon
-        </span>
+      </a><sup>1*</sup>,
 
 
-        <a
-          class="link-button"
-          href="https://github.com/tangjieh/RATR"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
+      <a href="mailto:zhao_wang@zju.edu.cn">
+
+        Zhao Wang
+
+      </a><sup>2</sup>,
+
+
+      <a href="mailto:jungonghan77@gmail.com">
+
+        Jungong Han
+
+      </a><sup>3</sup>
+
+
+    </div>
+
+
+    <!-- AFFILIATIONS -->
+
+    <div class="affiliations">
+
+
+      <div>
+
+        <sup>1</sup>
+        College of Information Science and Electronic Engineering,
+        Zhejiang University
 
       </div>
 
 
-      <!-- CORE MESSAGE -->
+      <div>
 
-      <div class="tagline">
-        Assign complementary structural and material roles to visual
-        conditions, then route their contributions over the denoising trajectory.
-      </div>
-
-
-      <!-- SMALL TAGS -->
-
-      <div class="concept-tags">
-
-        <span class="concept-tag">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-          Training-free
-        </span>
-
-        <span class="concept-tag">
-          <i class="fa-solid fa-code-branch"></i>
-          Role assignment
-        </span>
-
-        <span class="concept-tag">
-          <i class="fa-solid fa-route"></i>
-          Temporal routing
-        </span>
+        <sup>2</sup>
+        Ningbo Innovation Center,
+        Zhejiang University
 
       </div>
 
-    </header>
+
+      <div>
+
+        <sup>3</sup>
+        Department of Automation,
+        Tsinghua University
+
+      </div>
 
 
-    <!-- =====================================================
-         TEASER
-         ===================================================== -->
+      <div>
 
-    <section>
+        * Corresponding author
+
+      </div>
+
+
+    </div>
+
+
+    <!-- LINKS -->
+
+    <div class="links">
+
+
+      <span
+        class="link-button paper-disabled"
+      >
+
+        Paper Coming Soon
+
+      </span>
+
+
+      <a
+        class="link-button"
+        href="https://github.com/tangjieh/RATR"
+        target="_blank"
+      >
+
+        GitHub
+
+      </a>
+
+
+    </div>
+
+
+    <!-- CORE MESSAGE -->
+
+    <div class="tagline">
+
+      Assign complementary structural and material roles to visual
+      conditions, then route their contributions over the denoising trajectory.
+
+    </div>
+
+
+  </header>
+
+
+
+  <!-- ======================================================
+       TEASER
+       ====================================================== -->
+
+  <section class="teaser-section">
+
+
+    <div class="container">
+
 
       <div class="figure">
+
 
         <img
           src="./assets/images/figure1.jpg"
           alt="RATR teaser"
         >
 
+
       </div>
+
 
       <div class="caption">
+
         RATR preserves target geometry while rebinding diverse material
         appearances across targets, materials, and object categories.
+
       </div>
 
-    </section>
+
+    </div>
 
 
-    <div class="divider"></div>
+  </section>
 
 
-    <!-- =====================================================
-         ABSTRACT
-         ===================================================== -->
 
-    <section id="abstract">
+  <!-- ======================================================
+       ABSTRACT — TINT
+       ====================================================== -->
+
+  <section
+    id="abstract"
+    class="section section-tint"
+  >
+
+
+    <div class="container">
+
 
       <h2 class="section-title">
-        <i class="fa-solid fa-align-left"></i>
+
         Abstract
+
       </h2>
+
 
       <p class="section-text">
 
@@ -751,21 +1037,31 @@
 
       </p>
 
-    </section>
+
+    </div>
 
 
-    <div class="divider"></div>
+  </section>
 
 
-    <!-- =====================================================
-         METHOD
-         ===================================================== -->
 
-    <section id="method">
+  <!-- ======================================================
+       METHOD — WHITE
+       ====================================================== -->
+
+  <section
+    id="method"
+    class="section section-white"
+  >
+
+
+    <div class="container">
+
 
       <h2 class="section-title">
-        <i class="fa-solid fa-diagram-project"></i>
+
         Method
+
       </h2>
 
 
@@ -785,226 +1081,287 @@
 
       <div class="framework-figure">
 
+
         <img
           src="./assets/images/framework.jpg"
           alt="RATR framework"
         >
 
+
       </div>
 
 
       <div class="caption">
+
         Overview of the RATR framework.
+
       </div>
 
-    </section>
+
+    </div>
 
 
-    <div class="divider"></div>
+  </section>
 
 
-    <!-- =====================================================
-         QUALITATIVE RESULTS
-         ===================================================== -->
 
-    <section id="results">
+  <!-- ======================================================
+       QUALITATIVE RESULTS — TINT
+       ====================================================== -->
+
+  <section
+    id="results"
+    class="section section-tint"
+  >
+
+
+    <div class="container">
+
 
       <h2 class="section-title">
-        <i class="fa-regular fa-images"></i>
+
         Qualitative Results
+
       </h2>
 
 
-      <div class="figure figure-polished">
+      <div class="figure">
+
 
         <img
           src="./assets/images/comparison.jpg"
           alt="Comparison across material transfer methods"
+          class="paper-figure"
         >
+
 
       </div>
 
 
       <div class="caption">
+
         Qualitative comparisons across representative target-material pairs.
         RATR preserves target structure while expressing the material appearance
         of the reference.
+
       </div>
 
-    </section>
+
+    </div>
 
 
-    <div class="divider"></div>
+  </section>
 
 
-    <!-- =====================================================
-         MORE RESULTS
-         ===================================================== -->
 
-    <section id="more-results">
+  <!-- ======================================================
+       MORE RESULTS — WHITE
+       ====================================================== -->
+
+  <section
+    id="more-results"
+    class="section section-white"
+  >
+
+
+    <div class="container">
+
 
       <h2 class="section-title">
-        <i class="fa-solid fa-layer-group"></i>
+
         More Results
+
       </h2>
 
 
       <p class="section-intro">
-        Additional results across diverse targets, materials, and reference formats.
+
+        Additional results across diverse targets,
+        materials, and reference formats.
+
       </p>
 
 
-      <!-- ===================================================
-           EXTENDED QUALITATIVE GALLERY
-           =================================================== -->
+
+      <!-- ==================================================
+           LEVEL 2 — EXTENDED GALLERY
+           ================================================== -->
 
       <div class="results-group">
 
-        <div class="results-heading">
-          <i class="fa-regular fa-image"></i>
+
+        <h3 class="results-heading">
+
           Extended Qualitative Gallery
-        </div>
+
+        </h3>
 
 
         <div class="appendix-row">
 
+
           <div class="appendix-item">
+
 
             <img
               src="./assets/images/appendix1.jpg"
               alt="Additional RATR qualitative results 1"
             >
 
+
           </div>
 
 
           <div class="appendix-item">
+
 
             <img
               src="./assets/images/appendix2.jpg"
               alt="Additional RATR qualitative results 2"
             >
 
+
           </div>
 
+
         </div>
+
 
       </div>
 
 
-      <!-- ===================================================
-           CROSS-TARGET MATERIAL REBINDING
-           =================================================== -->
+
+      <!-- ==================================================
+           LEVEL 2 — CROSS-TARGET RESULT
+           ================================================== -->
 
       <div class="results-group">
 
-        <div class="results-heading">
-          <i class="fa-solid fa-shuffle"></i>
+
+        <h3 class="results-heading">
+
           Cross-Target Material Rebinding
-        </div>
+
+        </h3>
 
 
         <div class="feature-result">
+
 
           <img
             src="./assets/images/additional_results.jpg"
             alt="RATR material rebinding across diverse targets and materials"
           >
 
+
         </div>
+
 
       </div>
 
 
-      <!-- ===================================================
+
+      <!-- ==================================================
            FUTURE RESULTS
-           =================================================== -->
+           ==================================================
 
-      <div class="future-results-anchor">
+           后面直接继续：
 
-        <!--
+           <div class="results-group">
 
-        以后继续添加内容时，可以从这里接：
+             <h3 class="results-heading">
+               Ablation Study
+             </h3>
 
-        <div class="results-group">
+             <div class="figure">
 
-          <div class="results-heading">
-            <i class="fa-solid fa-sliders"></i>
-            Ablation Study
-          </div>
+               <img
+                 src="./assets/images/ablation1.jpg"
+                 alt="RATR ablation study"
+               >
 
-          <div class="figure figure-polished">
-            <img
-              src="./assets/images/ablation1.jpg"
-              alt="RATR ablation study"
-            >
-          </div>
+             </div>
 
-        </div>
+           </div>
 
 
-        后续可以继续添加：
+           可继续追加：
 
-        - Ablation Study
-        - SM-CDR Routing Control
-        - Human Evaluation
-        - Challenging Cases
-        - Failure Cases
-        - Additional Benchmark Results
+           Ablation Study
+           SM-CDR Routing Control
+           Human Evaluation
+           Challenging Cases
+           Failure Cases
 
-        -->
-
-      </div>
-
-    </section>
+           ================================================== -->
 
 
-    <div class="divider"></div>
+    </div>
 
 
-    <!-- =====================================================
-         BIBTEX
-         ===================================================== -->
+  </section>
 
-    <section id="citation">
+
+
+  <!-- ======================================================
+       BIBTEX
+       ====================================================== -->
+
+  <section
+    id="citation"
+    class="section section-white"
+  >
+
+
+    <div class="container">
+
 
       <h2 class="section-title">
-        <i class="fa-solid fa-quote-left"></i>
+
         BibTeX
+
       </h2>
 
 
-      <pre>@article{tang2026ratr,
+      <div class="bibtex-wrap">
+
+
+        <pre>@article{tang2026ratr,
   title  = {RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing},
   author = {Tang, Jiehui and Yu, Yunlong and Wang, Zhao and Han, Jungong},
   year   = {2026}
 }</pre>
 
-    </section>
+
+      </div>
 
 
-  </div>
+    </div>
 
 
-  <!-- =======================================================
+  </section>
+
+
+
+  <!-- ======================================================
        FOOTER
-       ======================================================= -->
+       ====================================================== -->
 
   <footer>
 
-    <div class="container">
 
-      <div class="footer-icon">
-        <i class="fa-solid fa-flask"></i>
-      </div>
+    <div class="container">
 
       RATR Project Page
 
       <br>
 
-      Zhejiang University &nbsp;·&nbsp; Tsinghua University
+      Zhejiang University
+      &nbsp;·&nbsp;
+      Tsinghua University
 
     </div>
+
 
   </footer>
 
