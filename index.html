@@ -274,7 +274,7 @@
     .section-intro {
       max-width: 890px;
 
-      margin: 0 auto 27px;
+      margin: 0 auto 28px;
 
       color: #555b60;
 
@@ -356,11 +356,11 @@
        ====================================================== */
 
     .results-group {
-      margin-top: 38px;
+      margin-top: 40px;
     }
 
     .results-group:first-of-type {
-      margin-top: 29px;
+      margin-top: 30px;
     }
 
     .results-heading {
@@ -370,7 +370,7 @@
 
       gap: 8px;
 
-      margin-bottom: 8px;
+      margin-bottom: 17px;
 
       color: #303438;
 
@@ -382,19 +382,6 @@
       color: #708ba3;
 
       font-size: 15px;
-    }
-
-    .results-description {
-      max-width: 800px;
-
-      margin: 0 auto 18px;
-
-      color: #666c72;
-
-      font-size: 14.5px;
-      line-height: 1.6;
-
-      text-align: center;
     }
 
 
@@ -437,8 +424,6 @@
        ====================================================== */
 
     .feature-result {
-      margin-top: 18px;
-
       padding: 13px;
 
       border: 1px solid #e9ecef;
@@ -458,40 +443,7 @@
 
 
     /* ======================================================
-       SMALL INSIGHT STRIP
-       ====================================================== */
-
-    .insight-strip {
-      max-width: 930px;
-
-      margin: 27px auto 0;
-
-      padding: 15px 19px;
-
-      display: flex;
-      align-items: flex-start;
-
-      gap: 11px;
-
-      border-left: 3px solid #8aa0b5;
-
-      background: #f8fafb;
-
-      color: #555c62;
-
-      font-size: 14.5px;
-      line-height: 1.62;
-    }
-
-    .insight-strip i {
-      margin-top: 3px;
-
-      color: #68859f;
-    }
-
-
-    /* ======================================================
-       FUTURE RESULTS HOOK
+       FUTURE RESULTS
        ====================================================== */
 
     .future-results-anchor {
@@ -602,10 +554,6 @@
         gap: 18px;
       }
 
-      .insight-strip {
-        text-align: left;
-      }
-
     }
 
   </style>
@@ -683,19 +631,6 @@
 
       <div class="links">
 
-        <!--
-        Paper 公开以后替换成：
-
-        <a
-          class="link-button"
-          href="https://arxiv.org/abs/XXXX.XXXXX"
-          target="_blank"
-        >
-          <i class="fa-solid fa-file-pdf"></i>
-          Paper
-        </a>
-        -->
-
         <span class="link-button paper-disabled">
           <i class="fa-solid fa-file-pdf"></i>
           Paper Coming Soon
@@ -722,7 +657,7 @@
       </div>
 
 
-      <!-- SMALL DECORATIVE TAGS -->
+      <!-- SMALL TAGS -->
 
       <div class="concept-tags">
 
@@ -915,21 +850,15 @@
 
 
       <p class="section-intro">
-
-        Beyond the representative comparisons above, RATR generalizes across
-        diverse target geometries, material appearances, and reference formats.
-        The following examples highlight its behavior under broader
-        target-material combinations.
-
+        Additional results across diverse targets, materials, and reference formats.
       </p>
 
 
       <!-- ===================================================
-           GROUP 1
+           EXTENDED QUALITATIVE GALLERY
            =================================================== -->
 
       <div class="results-group">
-
 
         <div class="results-heading">
           <i class="fa-regular fa-image"></i>
@@ -937,17 +866,7 @@
         </div>
 
 
-        <p class="results-description">
-
-          Additional examples span varied object categories and material
-          appearances, including patterned, glossy, metallic, fabric-like,
-          ceramic, and object-centric references.
-
-        </p>
-
-
         <div class="appendix-row">
-
 
           <div class="appendix-item">
 
@@ -968,33 +887,21 @@
 
           </div>
 
-
         </div>
 
       </div>
 
 
       <!-- ===================================================
-           GROUP 2 - NEW IMAGE
+           CROSS-TARGET MATERIAL REBINDING
            =================================================== -->
 
       <div class="results-group">
-
 
         <div class="results-heading">
           <i class="fa-solid fa-shuffle"></i>
           Cross-Target Material Rebinding
         </div>
-
-
-        <p class="results-description">
-
-          RATR accommodates both full-field and object-centric material
-          references across substantially different target geometries,
-          preserving recognizable object structure while adapting the visible
-          surface appearance.
-
-        </p>
 
 
         <div class="feature-result">
@@ -1003,21 +910,6 @@
             src="./assets/images/additional_results.jpg"
             alt="RATR material rebinding across diverse targets and materials"
           >
-
-        </div>
-
-
-        <div class="insight-strip">
-
-          <i class="fa-solid fa-circle-info"></i>
-
-          <div>
-            These examples illustrate that the role-assignment formulation is
-            not tied to a particular object class or material representation:
-            the same inference-time framework supports smooth objects,
-            articulated shapes, statues, and strongly patterned material
-            references.
-          </div>
 
         </div>
 
@@ -1032,39 +924,33 @@
 
         <!--
 
-        后续你增加新结果时，可以继续使用下面的模板：
+        以后继续添加内容时，可以从这里接：
 
         <div class="results-group">
 
           <div class="results-heading">
             <i class="fa-solid fa-sliders"></i>
-            Ablation and Routing Analysis
+            Ablation Study
           </div>
-
-          <p class="results-description">
-            Short explanatory sentence.
-          </p>
 
           <div class="figure figure-polished">
             <img
               src="./assets/images/ablation1.jpg"
-              alt="RATR ablation results"
+              alt="RATR ablation study"
             >
           </div>
 
         </div>
 
 
-        也可以继续添加：
+        后续可以继续添加：
 
-        1. Ablation Study
-        2. SM-CDR Routing Control
-        3. Challenging Cases
-        4. Failure Cases
-        5. More Benchmark Examples
-        6. Human Evaluation
-
-        当前网页不会显示这里的任何占位内容。
+        - Ablation Study
+        - SM-CDR Routing Control
+        - Human Evaluation
+        - Challenging Cases
+        - Failure Cases
+        - Additional Benchmark Results
 
         -->
 
