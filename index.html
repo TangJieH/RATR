@@ -14,7 +14,7 @@
     content="RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing"
   >
 
-  <!-- Font Awesome icons -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,15 +22,31 @@
 
   <style>
 
+    /* ======================================================
+       BASE
+       ====================================================== */
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       background: #ffffff;
       color: #222222;
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
       line-height: 1.62;
     }
 
@@ -40,7 +56,7 @@
     }
 
     .container {
-      width: min(1050px, calc(100% - 40px));
+      width: min(1080px, calc(100% - 42px));
       margin: 0 auto;
     }
 
@@ -51,73 +67,100 @@
 
     .hero {
       text-align: center;
-      padding-top: 58px;
-      padding-bottom: 28px;
+
+      padding-top: 62px;
+      padding-bottom: 30px;
     }
 
     .hero h1 {
-      max-width: 1000px;
+      max-width: 1030px;
+
       margin: 0 auto;
-      font-size: 42px;
-      line-height: 1.18;
-      font-weight: 700;
-      letter-spacing: -1px;
+
+      font-size: clamp(34px, 4.4vw, 46px);
+      line-height: 1.16;
+
+      font-weight: 760;
+      letter-spacing: -1.15px;
+
+      color: #202124;
     }
 
     .authors {
-      margin-top: 22px;
+      margin-top: 24px;
+
       font-size: 18px;
       line-height: 1.8;
     }
 
     .authors a {
-      color: #2b67a0;
+      color: #356f9f;
+
+      transition: color 0.15s ease;
     }
 
     .authors a:hover {
+      color: #214f78;
       text-decoration: underline;
     }
 
     .affiliations {
-      margin-top: 5px;
+      margin-top: 6px;
+
+      color: #5d6065;
+
       font-size: 15px;
-      color: #555555;
       line-height: 1.7;
     }
 
+
+    /* ======================================================
+       LINKS
+       ====================================================== */
+
     .links {
-      margin-top: 21px;
+      margin-top: 22px;
+
       display: flex;
       justify-content: center;
+      align-items: center;
+
       flex-wrap: wrap;
-      gap: 9px;
+
+      gap: 10px;
     }
 
     .link-button {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+
       gap: 7px;
 
-      padding: 7px 15px;
+      padding: 8px 16px;
 
-      background: #333333;
+      border-radius: 6px;
+
+      background: #2d2f32;
       color: #ffffff;
 
-      border-radius: 5px;
-
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
 
-      transition: 0.15s ease;
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease;
     }
 
     .link-button:hover {
-      background: #555555;
+      background: #484b50;
+
       transform: translateY(-1px);
     }
 
     .link-button.paper-disabled {
-      background: #4b6f96;
+      background: #55799b;
+
       cursor: default;
     }
 
@@ -125,61 +168,120 @@
       transform: none;
     }
 
+
+    /* ======================================================
+       TAGLINE
+       ====================================================== */
+
     .tagline {
-      max-width: 800px;
-      margin: 24px auto 0;
+      max-width: 830px;
+
+      margin: 26px auto 0;
+
+      color: #35383b;
 
       font-size: 19px;
-      line-height: 1.55;
+      line-height: 1.58;
+      font-weight: 620;
+    }
 
-      font-weight: 600;
-      color: #333333;
+    .concept-tags {
+      margin-top: 17px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .concept-tag {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 6px;
+
+      padding: 5px 10px;
+
+      border: 1px solid #e0e5e9;
+      border-radius: 999px;
+
+      background: #fafbfc;
+
+      color: #5a6269;
+
+      font-size: 12.5px;
+      font-weight: 550;
+    }
+
+    .concept-tag i {
+      color: #6684a0;
     }
 
 
     /* ======================================================
-       GENERAL SECTION
+       SECTIONS
        ====================================================== */
 
     section {
-      padding: 35px 0;
+      padding: 41px 0;
+    }
+
+    .divider {
+      height: 1px;
+
+      background: #eceef0;
     }
 
     .section-title {
-      margin: 0 0 20px;
+      margin: 0 0 22px;
 
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 10px;
+
+      color: #242629;
 
       font-size: 29px;
       line-height: 1.25;
-      font-weight: 700;
+      font-weight: 720;
+
+      text-align: center;
+    }
+
+    .section-title i {
+      color: #65829d;
+
+      font-size: 20px;
     }
 
     .section-text {
       max-width: 930px;
+
       margin: 0 auto;
 
+      color: #323538;
+
       font-size: 16.5px;
-      line-height: 1.75;
+      line-height: 1.78;
 
       text-align: justify;
     }
 
     .section-intro {
-      max-width: 900px;
-      margin: 0 auto 22px;
+      max-width: 890px;
 
-      color: #444444;
+      margin: 0 auto 27px;
+
+      color: #555b60;
 
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.72;
 
       text-align: center;
-    }
-
-    .divider {
-      height: 1px;
-      background: #ededed;
     }
 
 
@@ -189,53 +291,126 @@
 
     .figure {
       width: 100%;
+
       margin: 0 auto;
+
       text-align: center;
     }
 
     .figure img {
       display: block;
+
       width: 100%;
       height: auto;
+
       margin: 0 auto;
+
+      border-radius: 7px;
+
+      border: 1px solid #f0f0f0;
+    }
+
+    .figure-polished img {
+      box-shadow:
+        0 3px 14px rgba(30, 38, 46, 0.055);
     }
 
     .framework-figure {
-      max-width: 1000px;
-      margin: 26px auto 0;
+      max-width: 1010px;
+
+      margin: 29px auto 0;
     }
 
     .framework-figure img {
       display: block;
+
       width: 100%;
       height: auto;
+
       margin: 0 auto;
+
+      border-radius: 7px;
+
+      border: 1px solid #ededed;
+
+      box-shadow:
+        0 3px 14px rgba(30, 38, 46, 0.045);
     }
 
     .caption {
       max-width: 900px;
-      margin: 12px auto 0;
 
-      color: #666666;
+      margin: 13px auto 0;
+
+      color: #6a6e72;
+
       font-size: 14.5px;
-      line-height: 1.55;
+      line-height: 1.58;
 
       text-align: center;
     }
 
 
     /* ======================================================
-       APPENDIX / MORE RESULTS
+       MORE RESULTS
+       ====================================================== */
+
+    .results-group {
+      margin-top: 38px;
+    }
+
+    .results-group:first-of-type {
+      margin-top: 29px;
+    }
+
+    .results-heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      margin-bottom: 8px;
+
+      color: #303438;
+
+      font-size: 19px;
+      font-weight: 680;
+    }
+
+    .results-heading i {
+      color: #708ba3;
+
+      font-size: 15px;
+    }
+
+    .results-description {
+      max-width: 800px;
+
+      margin: 0 auto 18px;
+
+      color: #666c72;
+
+      font-size: 14.5px;
+      line-height: 1.6;
+
+      text-align: center;
+    }
+
+
+    /* ======================================================
+       APPENDIX PAIR
        ====================================================== */
 
     .appendix-row {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      gap: 16px;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 15px;
 
       width: 100%;
-      margin-top: 22px;
     }
 
     .appendix-item {
@@ -248,7 +423,79 @@
       width: 100%;
       height: auto;
 
-      margin: 0 auto;
+      border-radius: 7px;
+
+      border: 1px solid #eeeeee;
+
+      box-shadow:
+        0 3px 12px rgba(30, 38, 46, 0.045);
+    }
+
+
+    /* ======================================================
+       FEATURE RESULT
+       ====================================================== */
+
+    .feature-result {
+      margin-top: 18px;
+
+      padding: 13px;
+
+      border: 1px solid #e9ecef;
+      border-radius: 9px;
+
+      background: #fcfcfd;
+    }
+
+    .feature-result img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 5px;
+    }
+
+
+    /* ======================================================
+       SMALL INSIGHT STRIP
+       ====================================================== */
+
+    .insight-strip {
+      max-width: 930px;
+
+      margin: 27px auto 0;
+
+      padding: 15px 19px;
+
+      display: flex;
+      align-items: flex-start;
+
+      gap: 11px;
+
+      border-left: 3px solid #8aa0b5;
+
+      background: #f8fafb;
+
+      color: #555c62;
+
+      font-size: 14.5px;
+      line-height: 1.62;
+    }
+
+    .insight-strip i {
+      margin-top: 3px;
+
+      color: #68859f;
+    }
+
+
+    /* ======================================================
+       FUTURE RESULTS HOOK
+       ====================================================== */
+
+    .future-results-anchor {
+      margin-top: 38px;
     }
 
 
@@ -258,19 +505,22 @@
 
     pre {
       max-width: 900px;
+
       margin: 0 auto;
+
+      padding: 20px 22px;
 
       overflow-x: auto;
 
-      border: 1px solid #e1e1e1;
-      border-radius: 6px;
+      border: 1px solid #e1e4e7;
+      border-radius: 7px;
 
-      background: #f7f7f7;
+      background: #f7f8f9;
 
-      padding: 20px;
+      color: #33373a;
 
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.55;
 
       white-space: pre-wrap;
     }
@@ -281,16 +531,24 @@
        ====================================================== */
 
     footer {
-      border-top: 1px solid #ededed;
+      padding: 32px 0 39px;
 
-      padding: 30px 0 36px;
+      border-top: 1px solid #eceef0;
 
-      text-align: center;
-
-      color: #777777;
+      color: #7a7d80;
 
       font-size: 13px;
       line-height: 1.7;
+
+      text-align: center;
+    }
+
+    .footer-icon {
+      margin-bottom: 6px;
+
+      color: #8193a3;
+
+      font-size: 15px;
     }
 
 
@@ -300,16 +558,38 @@
 
     @media (max-width: 750px) {
 
+      .container {
+        width: min(100% - 26px, 1080px);
+      }
+
       .hero {
-        padding-top: 38px;
+        padding-top: 40px;
       }
 
       .hero h1 {
-        font-size: 31px;
+        font-size: 30px;
+
+        letter-spacing: -0.5px;
       }
 
       .authors {
         font-size: 16px;
+      }
+
+      .affiliations {
+        font-size: 13.5px;
+      }
+
+      .tagline {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      .section-title {
+        font-size: 25px;
       }
 
       .section-text {
@@ -318,6 +598,12 @@
 
       .appendix-row {
         grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+      .insight-strip {
+        text-align: left;
       }
 
     }
@@ -332,7 +618,7 @@
 
 
     <!-- =====================================================
-         TITLE
+         HERO
          ===================================================== -->
 
     <header class="hero">
@@ -398,7 +684,7 @@
       <div class="links">
 
         <!--
-        Paper 公开以后改为：
+        Paper 公开以后替换成：
 
         <a
           class="link-button"
@@ -428,9 +714,33 @@
       </div>
 
 
+      <!-- CORE MESSAGE -->
+
       <div class="tagline">
         Assign complementary structural and material roles to visual
         conditions, then route their contributions over the denoising trajectory.
+      </div>
+
+
+      <!-- SMALL DECORATIVE TAGS -->
+
+      <div class="concept-tags">
+
+        <span class="concept-tag">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          Training-free
+        </span>
+
+        <span class="concept-tag">
+          <i class="fa-solid fa-code-branch"></i>
+          Role assignment
+        </span>
+
+        <span class="concept-tag">
+          <i class="fa-solid fa-route"></i>
+          Temporal routing
+        </span>
+
       </div>
 
     </header>
@@ -469,6 +779,7 @@
     <section id="abstract">
 
       <h2 class="section-title">
+        <i class="fa-solid fa-align-left"></i>
         Abstract
       </h2>
 
@@ -494,11 +805,11 @@
         side, the designed material evidence isolation mechanism emphasizes
         material cues while reducing interference from object-specific
         structure, yielding a complementary material-oriented condition.
-        Surface–material conditional direction routing then dynamically adjusts
+        Surface-material conditional direction routing then dynamically adjusts
         the residual contributions of these two conditions at different
         denoising stages, balancing structural preservation and material
         transfer without modifying the editor's parameters. Across diverse
-        target–material pairs, RATR delivers superior results on all five
+        target-material pairs, RATR delivers superior results on all five
         reported target-side preservation metrics and leading reference-side
         material fidelity under our evaluation protocol, without requiring
         editor retraining.
@@ -518,6 +829,7 @@
     <section id="method">
 
       <h2 class="section-title">
+        <i class="fa-solid fa-diagram-project"></i>
         Method
       </h2>
 
@@ -563,11 +875,12 @@
     <section id="results">
 
       <h2 class="section-title">
+        <i class="fa-regular fa-images"></i>
         Qualitative Results
       </h2>
 
 
-      <div class="figure">
+      <div class="figure figure-polished">
 
         <img
           src="./assets/images/comparison.jpg"
@@ -596,64 +909,166 @@
     <section id="more-results">
 
       <h2 class="section-title">
+        <i class="fa-solid fa-layer-group"></i>
         More Results
       </h2>
 
 
       <p class="section-intro">
-        Additional results demonstrate RATR across diverse target categories,
-        material appearances, and challenging reference conditions.
+
+        Beyond the representative comparisons above, RATR generalizes across
+        diverse target geometries, material appearances, and reference formats.
+        The following examples highlight its behavior under broader
+        target-material combinations.
+
       </p>
 
 
-      <div class="appendix-row">
+      <!-- ===================================================
+           GROUP 1
+           =================================================== -->
+
+      <div class="results-group">
 
 
-        <div class="appendix-item">
+        <div class="results-heading">
+          <i class="fa-regular fa-image"></i>
+          Extended Qualitative Gallery
+        </div>
+
+
+        <p class="results-description">
+
+          Additional examples span varied object categories and material
+          appearances, including patterned, glossy, metallic, fabric-like,
+          ceramic, and object-centric references.
+
+        </p>
+
+
+        <div class="appendix-row">
+
+
+          <div class="appendix-item">
+
+            <img
+              src="./assets/images/appendix1.jpg"
+              alt="Additional RATR qualitative results 1"
+            >
+
+          </div>
+
+
+          <div class="appendix-item">
+
+            <img
+              src="./assets/images/appendix2.jpg"
+              alt="Additional RATR qualitative results 2"
+            >
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           GROUP 2 - NEW IMAGE
+           =================================================== -->
+
+      <div class="results-group">
+
+
+        <div class="results-heading">
+          <i class="fa-solid fa-shuffle"></i>
+          Cross-Target Material Rebinding
+        </div>
+
+
+        <p class="results-description">
+
+          RATR accommodates both full-field and object-centric material
+          references across substantially different target geometries,
+          preserving recognizable object structure while adapting the visible
+          surface appearance.
+
+        </p>
+
+
+        <div class="feature-result">
 
           <img
-            src="./assets/images/appendix1.jpg"
-            alt="Additional RATR qualitative results 1"
+            src="./assets/images/additional_results.jpg"
+            alt="RATR material rebinding across diverse targets and materials"
           >
 
         </div>
 
 
-        <div class="appendix-item">
+        <div class="insight-strip">
 
-          <img
-            src="./assets/images/appendix2.jpg"
-            alt="Additional RATR qualitative results 2"
-          >
+          <i class="fa-solid fa-circle-info"></i>
+
+          <div>
+            These examples illustrate that the role-assignment formulation is
+            not tied to a particular object class or material representation:
+            the same inference-time framework supports smooth objects,
+            articulated shapes, statues, and strongly patterned material
+            references.
+          </div>
 
         </div>
-
 
       </div>
 
 
       <!-- ===================================================
            FUTURE RESULTS
-
-           后续如果你还要继续添加 qualitative / ablation /
-           routing / failure cases，可以从这里继续增加。
-
-           示例：
-
-           <div style="margin-top: 32px;">
-
-             <div class="figure">
-               <img
-                 src="./assets/images/qualitative3.jpg"
-                 alt="Additional qualitative results"
-               >
-             </div>
-
-           </div>
-
-           暂时不显示任何占位内容。
            =================================================== -->
 
+      <div class="future-results-anchor">
+
+        <!--
+
+        后续你增加新结果时，可以继续使用下面的模板：
+
+        <div class="results-group">
+
+          <div class="results-heading">
+            <i class="fa-solid fa-sliders"></i>
+            Ablation and Routing Analysis
+          </div>
+
+          <p class="results-description">
+            Short explanatory sentence.
+          </p>
+
+          <div class="figure figure-polished">
+            <img
+              src="./assets/images/ablation1.jpg"
+              alt="RATR ablation results"
+            >
+          </div>
+
+        </div>
+
+
+        也可以继续添加：
+
+        1. Ablation Study
+        2. SM-CDR Routing Control
+        3. Challenging Cases
+        4. Failure Cases
+        5. More Benchmark Examples
+        6. Human Evaluation
+
+        当前网页不会显示这里的任何占位内容。
+
+        -->
+
+      </div>
 
     </section>
 
@@ -668,8 +1083,10 @@
     <section id="citation">
 
       <h2 class="section-title">
+        <i class="fa-solid fa-quote-left"></i>
         BibTeX
       </h2>
+
 
       <pre>@article{tang2026ratr,
   title  = {RATR: Training-Free Material Rebinding via Role Assignment and Temporal Routing},
@@ -690,6 +1107,10 @@
   <footer>
 
     <div class="container">
+
+      <div class="footer-icon">
+        <i class="fa-solid fa-flask"></i>
+      </div>
 
       RATR Project Page
 
